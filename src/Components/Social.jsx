@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import "../Styles/social.css";
 import contact_image from "../Images/contacts.svg";
 import { BsGithub, BsLinkedin, BsFillEnvelopeFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+
 const Social = () => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
