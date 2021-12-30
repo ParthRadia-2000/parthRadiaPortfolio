@@ -1,0 +1,130 @@
+.intro {
+  z-index: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  border: 1px solid #ffffff;
+  height: 100vh;
+}
+.basic_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  /*border: 2px solid orange;*/
+}
+
+.child1 {
+  font-size: 60px;
+  margin: 10px;
+}
+.child2 {
+  font-size: 50px;
+  margin: 10px;
+}
+.child1,
+.child2 {
+  background-image: -webkit-linear-gradient(
+    92deg,
+    #ffaccf 28%,
+    #5cb6f8 51%,
+    #ba75e0 87%,
+    #dd5183 96%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hue 10s infinite linear;
+}
+.other_details {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  /*border: 2px solid red;*/
+}
+.projects,
+.interest,
+.contact,
+.about {
+  bottom: 1px;
+  border: 0.1px solid #a3a3a3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  text-align: end;
+  color: #fafafa;
+  text-decoration: none solid rgb(0, 0, 238);
+}
+.interest:hover {
+  background: #00f260;
+  background: -webkit-linear-gradient(to left, #00f260, #0575e6);
+  background: linear-gradient(to left, #00f260, #0575e6);
+}
+.projects:hover {
+  background: #00f260;
+  background: -webkit-linear-gradient(to top, #0575e6, #00f260);
+  background: linear-gradient(to top, #0575e6, #00f260);
+}
+.contact:hover {
+  background: #00f260;
+  background: -webkit-linear-gradient(to right, #0575e6, #00f260);
+  background: linear-gradient(to right, #0575e6, #00f260);
+}
+.about:hover {
+  background: #00f260;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #00f260);
+  background: linear-gradient(to bottom, #0575e6, #00f260);
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.redirect_link,
+.redirect_button {
+  font-size: 20px;
+  font-weight: 400;
+}
+.redirect_link {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background-color: inherit;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .basic_details {
+    margin-top: 100px;
+  }
+  .projects,
+  .interest,
+  .contact,
+  .about {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .child1,
+  .child2 {
+    font-size: 40px;
+  }
+  .projects,
+  .interest,
+  .contact,
+  .about {
+    padding: 10px;
+  }
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
